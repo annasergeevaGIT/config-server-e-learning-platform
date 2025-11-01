@@ -1,0 +1,30 @@
+server:
+  port: 8085
+  shutdown: graceful
+  tomcat:
+    connection-timeout: 3s
+    keep-alive-timeout: 20s
+    threads:
+      max: 200
+      min-spare: 10
+
+spring:
+  application:
+    name: config-server-e-learning-platform
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/annasergeevaGIT/config-repository
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
