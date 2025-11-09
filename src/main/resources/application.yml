@@ -17,7 +17,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/annasergeevaGIT/config-repository
+          uri: https://github.com/annasergeevaGIT/config-repository-e-learning-platform
           default-label: main
           timeout: 5
           clone-on-start: true
